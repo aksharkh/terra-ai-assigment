@@ -1,5 +1,6 @@
 import json
 import os
+import time
 from datetime import datetime
 from dotenv import load_dotenv
 import google.generativeai as genai 
@@ -103,5 +104,7 @@ if __name__ == "__main__":
         print(f"   NPC Replies: \"{npc_response}\"")
         print(f"   History Used (last 3 turns): {current_state['history'][:-2]}")
         print("---\n")
+
+        time.sleep(4)
         
     print("3. All messages processed.")
